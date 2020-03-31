@@ -1,10 +1,14 @@
 <div>
   <h2>Fav Quotes</h2>
   <ul>
-    <li *ngFor='let quote of quotes'>
-      {{quote.name}}
-      <button (click)='toggleDetails(i)'>Toggle Details</button>
-      <app-quotes-detail *ngIf='quote.showDescription' [quote]='quote'></app-quotes-detail>
-    </li>
+    <div *ngFor='let quote of quotes;let i = index'>
+      <li>
+        {{quote.name}} posted on {{quote.postDate | date }}
+      </li>
+      <button (click)='toggleDetails(i)'>Toggle</button>
+      <app-quotes-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='completeQuote($event,i)'>
+      </app-quotes-detail>
+
+    </div>
   </ul>
 </div>

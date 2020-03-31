@@ -8,10 +8,29 @@ import { Quote } from '../quote';
 })
 export class QuotesComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote(1, 'Coders are fueled by coffee', 'David Baldaci'),
-    new Quote(2, 'Lms is not a Bible', 'David Kahara'),
-    new Quote(3, 'Prepare to master the internet', 'Gynn Glen')
+    new Quote(
+      1,
+      'Coders are fueled by coffee',
+      'David Baldaci',
+      new Date(2020, 3, 31)
+    ),
+    new Quote(2, 'Lms is not a Bible', 'David Kahara', new Date(2020, 3, 31)),
+    new Quote(
+      3,
+      'Prepare to master the internet',
+      'Gynn Glen',
+      new Date(2020, 3, 31)
+    )
   ];
+
+  toggleDetails(index) {
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
+  completeQuote(isComplete, index) {
+    if (isComplete) {
+      this.quotes.splice(index, 1);
+    }
+  }
 
   constructor() {}
 
