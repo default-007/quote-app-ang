@@ -1,4 +1,34 @@
 <p>
   {{quote.author}}
 </p>
+<div class="four wide column center aligned votes">
+  <div class="ui statistic">
+
+    <div class="value">
+      Votes: {{ votes }}
+    </div>
+
+  </div>
+
+</div>
+
+<div class="twelve wide column">
+
+  <ul class="ui big horizontal list voters">
+    <li class="item">
+      <a href (click)="likeVote()">
+        <i class="arrow up icon"></i>
+        upvote
+      </a>
+    </li>
+
+    <li class="item">
+      <a href (click)="dislikeVote()">
+        <i class="arrow down icon"></i>
+        downvote
+      </a>
+    </li>
+
+  </ul>
+</div>
 <button (click)='quoteDelete(true)' class="btn btn-outline-danger">Delete</button>
