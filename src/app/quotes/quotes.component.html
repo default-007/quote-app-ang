@@ -1,12 +1,12 @@
 <div class="containe">
   <h2>Fav Quotes</h2>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-8">
       <ul>
         <div *ngFor='let quote of quotes;let i = index'>
           <div>
             <li>
-              {{quote.name}} posted on {{quote.postDate|dateCount}}
+              <h4>{{quote.name}} posted on {{quote.postDate|dateCount}}</h4>
             </li>
             <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle</button>
           </div>
@@ -16,6 +16,9 @@
           </div>
         </div>
       </ul>
+    </div>
+    <div class="col-md-6">
+      <app-goal-form (addQuote)="addNewQuote($event)"></app-goal-form>
     </div>
   </div>
 </div>
