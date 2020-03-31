@@ -8,7 +8,6 @@ import { QuotesComponent } from './quotes/quotes.component';
 import { QuotesDetailComponent } from './quotes-detail/quotes-detail.component';
 import { DateCountPipe } from './date-count.pipe';
 import { GoalFormComponent } from './goal-form/goal-form.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -16,10 +15,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     QuotesComponent,
     QuotesDetailComponent,
     DateCountPipe,
-    GoalFormComponent,
-    FontAwesomeModule
+    GoalFormComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, FontAwesomeModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
