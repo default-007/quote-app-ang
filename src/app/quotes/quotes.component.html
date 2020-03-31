@@ -1,4 +1,4 @@
-<div class="containe">
+<div class="container">
   <h2>Fav Quotes</h2>
   <div class="row">
     <div class="col-md-8">
@@ -6,9 +6,9 @@
         <div *ngFor='let quote of quotes;let i = index'>
           <div>
             <li>
-              <h4>{{quote.name}} posted on {{quote.postDate | dateCount}}</h4>
+              <span class="quote">"{{quote.name}}" </span> posted {{quote.postDate | dateCount}}
             </li>
-            <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle</button>
+            <button (click)='toggleDetails(i)' class="btn btn-primary">Author</button>
           </div>
           <div *ngIf='quote.showDescription'>
             <app-quotes-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'>
@@ -17,7 +17,7 @@
         </div>
       </ul>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
       <app-goal-form (addQuote)="addNewQuote($event)"></app-goal-form>
     </div>
   </div>
