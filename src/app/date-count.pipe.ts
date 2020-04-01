@@ -32,4 +32,11 @@ export class DateCountPipe implements PipeTransform {
     }
     return value;
   }
+  public postDate: Date = new Date();
+
+  constructor() {
+    setInterval(() => {
+      this.postDate = new Date();
+    }, 1);
+  }
 }
