@@ -4,3 +4,10 @@
 .bg-danger {
   padding-bottom: 20px;
 }
+.card {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}

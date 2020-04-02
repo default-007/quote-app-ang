@@ -12,20 +12,12 @@
 </div>
 
 
-<div class="">
-  <ul class="">
-    <li class="">
-      <a href (click)="likeVote()">
-        <i class="arrow down icon"></i>
-        upvote
-      </a>
-    </li>
-    <li class="">
-      <a href (click)=" dislikeVote()">
-        <i class="arrow down icon"></i>
-        downvote
-      </a>
-    </li>
-  </ul>
+<div class="voter">
+  <a href (click)="likeVote()">
+    <button class="arrow down icon btn-primary">Upvote</button>
+  </a>
+  <a href (click)=" dislikeVote()">
+    <button class="arrow down icon btn-warning">Downvote</button>
+  </a>
 </div>
 <button (click)='quoteDelete(true)' class="btn btn-outline-danger">Delete</button>

@@ -1,21 +1,25 @@
-<div class="container bg-danger">
+<div class="container ">
   <h2>Fav Quotes</h2>
   <div class="row">
     <div class="col-md-8 yellow">
-      <ul>
-        <div *ngFor='let quote of quotes;let i = index'>
-          <div>
-            <li>
-              <span class="quote">"{{quote.name}}" </span> posted {{quote.postDate | dateCount}}
-            </li>
-            <button (click)='toggleDetails(i)' class="btn btn-primary">Author</button>
+      <div class="">
+        <ul>
+          <div *ngFor='let quote of quotes;let i = index'>
+            <div class="card">
+              <div>
+                <li>
+                  <span class="quote">"{{quote.name}}" </span> posted {{quote.postDate | dateCount}}
+                </li>
+                <button (click)='toggleDetails(i)' class="btn btn-primary">Author</button>
+              </div>
+            </div>
+            <div *ngIf='quote.showDescription'>
+              <app-quotes-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'>
+              </app-quotes-detail>
+            </div>
           </div>
-          <div *ngIf='quote.showDescription'>
-            <app-quotes-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'>
-            </app-quotes-detail>
-          </div>
-        </div>
-      </ul>
+        </ul>
+      </div>
     </div>
     <div class="col-md-4">
       <app-goal-form (addQuote)="addNewQuote($event)"></app-goal-form>
