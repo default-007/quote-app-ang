@@ -1,5 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+body {
+  background-image: url(/assets/headphones_black_close_up_153018_3840x2400.jpg);
+  z-index: 0;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 h1 {
   color: #369;
   font-family: Arial, Helvetica, sans-serif;
