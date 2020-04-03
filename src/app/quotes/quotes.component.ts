@@ -25,6 +25,12 @@ export class QuotesComponent implements OnInit {
       'Gynn Glen',
       'Karrie',
       new Date(2020, 3, 31)
+    ),
+    new Quote(
+      'You can, you should, and if you are brave enough to start, you will.',
+      'Stephen King',
+      'John Paul',
+      new Date(2020, 4, 2)
     )
   ];
 

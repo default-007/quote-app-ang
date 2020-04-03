@@ -7,7 +7,7 @@ export class HighlightDirective {
   constructor(private elem: ElementRef) {}
 
   @HostListener('mouseover') onHover() {
-    this.textDeco('line-through');
+    this.textDeco('underline');
   }
 
   @HostListener('mouseout') onMouseOut() {

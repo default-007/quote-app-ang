@@ -8,8 +8,10 @@
             <div class="card">
               <div>
                 <li>
-                  <span class="quote" appHighlight>"{{quote.name}}" </span> posted {{quote.postDate | dateCount}} by
-                  <span class="quote">~{{quote.user}}~</span>
+                  <span class="quote" appHighlight>"{{quote.name}}" </span>
+                  <br>
+                  posted {{quote.postDate | dateCount}} by
+                  <span class="quotes">~{{quote.user}}~</span>
 
                 </li>
                 <button (click)='toggleDetails(i)' class="btn btn-primary">Author</button>
