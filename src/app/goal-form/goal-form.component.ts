@@ -7,7 +7,7 @@ import { Quote } from '../quote';
   styleUrls: ['./goal-form.component.css']
 })
 export class GoalFormComponent implements OnInit {
-  newQuote = new Quote(0, '', '', new Date());
+  newQuote = new Quote('', '', '', new Date());
   @Output() addQuote = new EventEmitter<Quote>();
 
   submitQuote() {

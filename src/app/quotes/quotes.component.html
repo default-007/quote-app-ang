@@ -7,8 +7,10 @@
           <div *ngFor='let quote of quotes;let i = index'>
             <div class="card">
               <div>
-                <li appHighlight>
-                  <span class="quote">"{{quote.name}}" </span> posted {{quote.postDate | dateCount}}
+                <li>
+                  <span class="quote" appHighlight>"{{quote.name}}" </span> posted {{quote.postDate | dateCount}} by
+                  <span class="quote">~{{quote.user}}~</span>
+
                 </li>
                 <button (click)='toggleDetails(i)' class="btn btn-primary">Author</button>
               </div>

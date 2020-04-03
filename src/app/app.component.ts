@@ -10,12 +10,22 @@ export class AppComponent {
   title = 'Quotes App';
 
   quotes: Quote[] = [
-    new Quote(1, 'Coders are fueled by coffee', 'David', new Date(2020, 3, 31)),
-    new Quote(2, 'Lms is not a Bible', 'David Kahara', new Date(2020, 3, 31)),
     new Quote(
-      3,
+      'Coders are fueled by coffee',
+      'David Baldaci',
+      'default-007',
+      new Date(2020, 3, 31)
+    ),
+    new Quote(
+      'Lms is not a Bible',
+      'David Kahara',
+      'John Doe',
+      new Date(2020, 3, 31)
+    ),
+    new Quote(
       'Prepare to master the internet',
       'Gynn Glen',
+      'Karrie',
       new Date(2020, 3, 31)
     )
   ];
