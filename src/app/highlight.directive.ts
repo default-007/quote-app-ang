@@ -1,10 +1,20 @@
-import { Directive } from '@angular/core';
-
+import { Directive, ElementRef, HostListener } from '@angular/core';
+import { Renderer2, Input } from '@angular/core';
 @Directive({
   selector: '[appHighlight]'
 })
 export class HighlightDirective {
+  constructor(private elem: ElementRef) {}
 
-  constructor() { }
+  @HostListener('mouseover') onHover() {
+    this.textDeco('line-through');
+  }
 
+  @HostListener('mouseout') onMouseOut() {
+    this.textDeco('None');
+  }
+
+  private textDeco(action: string) {
+    this.elem.nativeElement.style.textDecoration = action;
+  }
 }
